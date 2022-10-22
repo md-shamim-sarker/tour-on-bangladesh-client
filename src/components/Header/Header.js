@@ -31,7 +31,9 @@ const Header = () => {
         <nav className='bg-gray-200 text-blue-700 py-2 text-lg px-3 lg:px-0'>
             <div className='w-full lg:w-4/5 mx-auto flex justify-between items-center'>
                 <div className='flex gap-x-3'>
-                    <h2 className='text-2xl font-bold'>TOB</h2>
+                    <h2 className='text-2xl font-bold'>
+                        <NavLink to={"/"} className="hover:no-underline cursor-pointer">TOB</NavLink>
+                    </h2>
 
                 </div>
                 <div className='hidden lg:flex gap-x-5'>
@@ -59,7 +61,9 @@ const Header = () => {
                         <Drawer size={size} placement={placement} open={open} onClose={() => setOpen(false)}>
                             <Drawer.Header>
                                 <Drawer.Title>
-                                    <span className='text-xl font-bold text-blue-800'>Tour On Bangladesh</span>
+                                    <span className='text-xl font-bold text-blue-800'>
+                                        <NavLink to={"/"} className="hover:no-underline cursor-pointer">Tour On Bangladesh</NavLink>
+                                    </span>
                                 </Drawer.Title>
                             </Drawer.Header>
                             <Drawer.Body>
