@@ -1,4 +1,5 @@
 import {createBrowserRouter} from "react-router-dom";
+import About from "../components/About/About";
 import Divisions from "../components/Divisions/Divisions";
 import Error from "../components/Error/Error";
 import Hotels from "../components/Hotels/Hotels";
@@ -14,15 +15,22 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/divisions",
+                loader: () => fetch("https://tour-on-bangladesh-server.vercel.app/divisions"),
                 element: <Divisions></Divisions>
             },
             {
                 path: "/places",
+                loader: () => fetch("https://tour-on-bangladesh-server.vercel.app/places"),
                 element: <Places></Places>
             },
             {
                 path: "/hotels",
+                loader: () => fetch("https://tour-on-bangladesh-server.vercel.app/hotels"),
                 element: <Hotels></Hotels>
+            },
+            {
+                path: "/about",
+                element: <About></About>
             },
             {
                 path: "/login",
